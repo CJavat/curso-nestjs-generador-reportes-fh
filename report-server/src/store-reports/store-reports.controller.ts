@@ -13,7 +13,7 @@ export class StoreReportsController {
   ) {
     // return this.storeReportsService.getOrderByIdReport(orderId);
 
-    const pdfDoc = await this.storeReportsService.getOrderByIdReport(orderId);
+    const pdfDoc = await this.storeReportsService.getOrderByIdReport(+orderId);
 
     response.setHeader('Content-Type', 'application/pdf');
     pdfDoc.info.Title = 'Hola Mundo';
